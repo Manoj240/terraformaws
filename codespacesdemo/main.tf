@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "us-east-1" 
+    region = "us-east-1"
 }
 
 variable "ami" {
@@ -24,4 +24,3 @@ module "ec2instance" {
     # in instance_type var, then it will take t2.micro as default value
     instance_type = lookup(var.instance_type, terraform.workspace, "t2.micro") 
 }
-
